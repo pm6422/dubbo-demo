@@ -16,7 +16,7 @@
     -->
     <properties>
         <curator.version>4.0.1</curator.version>
-        <dubbo.version>2.7.5</dubbo.version>
+        <dubbo.version>2.7.8</dubbo.version>
     </properties>
 
     <dependencies>
