@@ -150,7 +150,7 @@ application:
         host:
     aop-logging:
         enabled: true
-        method-whitelist-mode: false
+        method-whitelist-mode: true
         method-whitelist:
             - AppController.findById
     elapsed-time-logging:
