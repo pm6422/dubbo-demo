@@ -13,7 +13,7 @@ import org.infinity.dubbo.democommon.domain.Authority;
 @ChangeLog(order = "01")
 public class DatabaseInitializer {
 
-    private static final String APP_NAME = "rpc-demo-server";
+    private static final String APP_NAME = "dubbo-demo-server";
 
     @ChangeSet(order = "01", author = "Louis", id = "addApps", runAlways = true)
     public void addApps(MongockTemplate mongoTemplate) {
