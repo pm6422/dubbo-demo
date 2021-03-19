@@ -133,7 +133,7 @@ dubbo: # Dubbo configuration, used by DubboConfigurationProperties
 application:
     http:
         cache: # Used by the CachingHttpHeadersFilter
-            time-to-live-in-days: 31
+            expired-after: 31
     swagger:
         enabled: true
         api:
