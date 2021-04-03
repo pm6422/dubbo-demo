@@ -1,6 +1,6 @@
 package org.infinity.dubbo.demoserver.service.impl;
 
-import org.apache.dubbo.config.annotation.Service;
+import org.apache.dubbo.config.annotation.DubboService;
 import org.infinity.dubbo.democommon.domain.AdminMenu;
 import org.infinity.dubbo.democommon.dto.AdminMenuTreeDTO;
 import org.infinity.dubbo.democommon.service.AdminMenuService;
@@ -11,7 +11,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Service
+@DubboService
 public class AdminMenuServiceImpl implements AdminMenuService {
 
     private final AdminMenuRepository adminMenuRepository;

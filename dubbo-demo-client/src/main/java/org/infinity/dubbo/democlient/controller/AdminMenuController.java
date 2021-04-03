@@ -5,7 +5,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.dubbo.config.annotation.Reference;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.infinity.dubbo.democommon.dto.AdminMenuTreeDTO;
 import org.infinity.dubbo.democommon.service.AdminMenuService;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +26,7 @@ public class AdminMenuController {
 
     private AdminMenuService adminMenuService;
 
-    @Reference(timeout = 10000)
+    @DubboReference(timeout = 10000)
     public void setAdminMenuService(AdminMenuService adminMenuService) {
         this.adminMenuService = adminMenuService;
     }

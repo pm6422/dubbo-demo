@@ -2,7 +2,7 @@ package org.infinity.dubbo.democlient.controller;
 
 import io.swagger.annotations.*;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.dubbo.config.annotation.Reference;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.infinity.dubbo.democlient.component.HttpHeaderCreator;
 import org.infinity.dubbo.democlient.exception.NoDataFoundException;
 import org.infinity.dubbo.democommon.domain.Authority;
@@ -27,7 +27,7 @@ import static org.infinity.dubbo.democlient.utils.HttpHeaderUtils.generatePageHe
 @Slf4j
 public class AuthorityController {
 
-    @Reference
+    @DubboReference
     private       AuthorityService  authorityService;
     private final HttpHeaderCreator httpHeaderCreator;
 

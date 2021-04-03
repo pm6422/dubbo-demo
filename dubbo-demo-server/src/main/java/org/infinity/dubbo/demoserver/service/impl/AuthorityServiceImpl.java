@@ -1,6 +1,6 @@
 package org.infinity.dubbo.demoserver.service.impl;
 
-import org.apache.dubbo.config.annotation.Service;
+import org.apache.dubbo.config.annotation.DubboService;
 import org.infinity.dubbo.democommon.domain.Authority;
 import org.infinity.dubbo.democommon.service.AuthorityService;
 import org.infinity.dubbo.demoserver.repository.AuthorityRepository;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-@Service
+@DubboService
 public class AuthorityServiceImpl implements AuthorityService {
 
     private final AuthorityRepository authorityRepository;

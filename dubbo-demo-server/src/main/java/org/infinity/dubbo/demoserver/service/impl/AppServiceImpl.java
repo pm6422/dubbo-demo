@@ -1,7 +1,7 @@
 package org.infinity.dubbo.demoserver.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.dubbo.config.annotation.Service;
+import org.apache.dubbo.config.annotation.DubboService;
 import org.infinity.dubbo.democommon.domain.App;
 import org.infinity.dubbo.democommon.service.AppService;
 import org.infinity.dubbo.demoserver.exception.NoDataFoundException;
@@ -11,7 +11,7 @@ import org.springframework.data.domain.Pageable;
 
 import java.util.Optional;
 
-@Service(retries = 1)
+@DubboService(retries = 1)
 @Slf4j
 public class AppServiceImpl implements AppService {
 

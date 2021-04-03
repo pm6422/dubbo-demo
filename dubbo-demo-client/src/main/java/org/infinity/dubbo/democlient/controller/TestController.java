@@ -8,8 +8,6 @@ import org.apache.dubbo.config.annotation.DubboReference;
 import org.apache.dubbo.rpc.service.GenericService;
 import org.infinity.dubbo.democommon.domain.App;
 import org.infinity.dubbo.democommon.service.AppService;
-import org.springframework.context.ApplicationContext;
-import org.springframework.core.env.Environment;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -25,15 +23,8 @@ import java.util.Map;
 @Slf4j
 public class TestController {
 
-    private final ApplicationContext applicationContext;
-    private final Environment        env;
     @DubboReference(url = "127.0.0.1:24010")
-    private       AppService         appService;
-
-    public TestController(ApplicationContext applicationContext, Environment env) {
-        this.applicationContext = applicationContext;
-        this.env = env;
-    }
+    private AppService appService;
 
     @ApiOperation("测试直连")
     @GetMapping("/api/test/direct-url")
@@ -50,7 +41,7 @@ public class TestController {
         reference.setInterface("org.infinity.dubbo.democommon.service.AppService");
         reference.setGeneric("true");
         GenericService genericService = reference.get();
-        Map<String, Object> appMap = new HashMap<>();
+        Map<String, Object> appMap = new HashMap<>(2);
         appMap.put("name", "testApp");
         appMap.put("enabled", true);
 
