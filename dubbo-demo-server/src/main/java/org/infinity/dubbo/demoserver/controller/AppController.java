@@ -7,6 +7,7 @@ import org.infinity.dubbo.democommon.service.AppService;
 import org.infinity.dubbo.demoserver.component.HttpHeaderCreator;
 import org.infinity.dubbo.demoserver.exception.NoDataFoundException;
 import org.infinity.dubbo.demoserver.repository.AppRepository;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -32,7 +33,7 @@ public class AppController {
     private final HttpHeaderCreator httpHeaderCreator;
 
     public AppController(AppRepository appRepository,
-                         AppService appService,
+                         @Qualifier("appService1Impl") AppService appService,
                          HttpHeaderCreator httpHeaderCreator) {
         this.appRepository = appRepository;
         this.appService = appService;

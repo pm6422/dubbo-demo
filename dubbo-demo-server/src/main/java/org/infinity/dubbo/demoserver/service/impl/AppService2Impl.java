@@ -11,13 +11,13 @@ import org.springframework.data.domain.Pageable;
 
 import java.util.Optional;
 
-@DubboService(retries = 1)
+@DubboService(group = "g2", retries = 1)
 @Slf4j
-public class AppServiceImpl implements AppService {
+public class AppService2Impl implements AppService {
 
     private final AppRepository appRepository;
 
-    public AppServiceImpl(AppRepository appRepository) {
+    public AppService2Impl(AppRepository appRepository) {
         this.appRepository = appRepository;
     }
 

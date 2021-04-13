@@ -27,7 +27,7 @@ import static org.infinity.dubbo.democlient.utils.HttpHeaderUtils.generatePageHe
 @Slf4j
 public class AppController {
 
-    @DubboReference(timeout = 10000)
+    @DubboReference(group = "g1", timeout = 10000)
     private AppService appService;
 
     private final HttpHeaderCreator httpHeaderCreator;
