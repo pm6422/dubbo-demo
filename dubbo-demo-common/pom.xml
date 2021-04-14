@@ -8,6 +8,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>dubbo-demo-common</artifactId>
+    <name>${project.artifactId}</name>
 
     <!--
         *************************************************************************************
